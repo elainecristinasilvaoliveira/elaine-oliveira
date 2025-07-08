@@ -1,0 +1,496 @@
+/* Reset e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nome {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 1.5rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.menu a:hover {
+    color: #3498db;
+}
+
+.menu a.active {
+    color: #3498db;
+}
+
+.menu a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3498db;
+}
+
+/* Conteúdo principal */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.content-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    color: #2c3e50;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+h4 {
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para a seção Sobre Mim */
+.sobre-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.foto-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    background-image: url('foto-perfil.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 5px solid #3498db;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-texto {
+    flex: 2;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para os hobbies */
+.hobbies-title {
+    margin-top: 2rem;
+}
+
+.hobbies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.hobby-item {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a seção Formação */
+.formacao-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.formacao-item {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.formacao-item ul {
+    list-style-position: inside;
+    margin-top: 1rem;
+}
+
+.formacao-item li {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para a seção Portfólio */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.portfolio-item {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a calculadora */
+.calculadora {
+    max-width: 250px;
+    margin: 1rem auto;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+}
+
+.calculadora input {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    text-align: right;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.calculadora .botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.calculadora button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #546570;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calculadora button:hover {
+    background-color: #a4aaad;
+}
+
+.calculadora .limpar {
+    grid-column: span 4;
+    background-color: #5790a1;
+}
+
+.calculadora .limpar:hover {
+    background-color: #67c6d3;
+}
+
+/* Estilos para a Hora Mundial */
+.hora-mundial-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.relogio-mundial {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cidade {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cidade h4 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.cidade .time {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.controles-hora-mundial {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.controles-hora-mundial button {
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.controles-hora-mundial button:hover {
+    background-color: #2980b9;
+}
+
+.controles-hora-mundial select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Estilos para o Jogo Genius */
+.genius-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.genius {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 1.5rem;
+}
+
+.bloco {
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#verde {
+    background-color: #2ecc71;
+    border-top-left-radius: 100%;
+}
+
+#vermelho {
+    background-color: #e74c3c;
+    border-top-right-radius: 100%;
+}
+
+#amarelo {
+    background-color: #f1c40f;
+    border-bottom-left-radius: 100%;
+}
+
+#azul {
+    background-color: #3498db;
+    border-bottom-right-radius: 100%;
+}
+
+.bloco.ativo {
+    opacity: 0.8;
+    transform: scale(0.95);
+}
+
+.bloco.clicado {
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+
+.controles-genius {
+    margin-top: 1rem;
+}
+
+.controles-genius button {
+    padding: 0.5rem 1.5rem;
+    background-color: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 1rem;
+}
+
+.controles-genius button:hover {
+    background-color: #8e44ad;
+}
+
+.pontuacao {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.mensagem-genius {
+    min-height: 50px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 1rem;
+}
+
+/* Estilos para o formulário de contato */
+.form-contato {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.btn-enviar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #47627e;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nome {
+        margin-bottom: 1rem;
+    }
+    
+    .menu ul {
+        justify-content: center;
+    }
+    
+    .menu li {
+        margin: 0 0.75rem;
+    }
+    
+    .sobre-container {
+        flex-direction: column;
+    }
+    
+    .foto-perfil {
+        margin-bottom: 1.5rem;
+    }
+    
+    .hobby-item,
+    .formacao-item,
+    .portfolio-item {
+        min-width: 100%;
+    }
+    
+    .relogio-mundial {
+        grid-template-columns: 1fr;
+    }
+}
